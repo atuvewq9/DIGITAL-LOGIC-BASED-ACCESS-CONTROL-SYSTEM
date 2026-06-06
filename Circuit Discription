@@ -1,0 +1,31 @@
+Three slide switches represent inputs A, B, and C
+- NOT gate is used on C input
+- AND gate combines all conditions
+- LED indicates correct password entry
+
+3 input switches → represent a 3-bit binary code (A, B, C)
+One correct code (i.e 110)
+Two outputs:
+ Green LED → correct code entered (door unlock)
+ Red LED → wrong code entered (error)
+
+Unlock signal (Door Open)
+This should be HIGH only when:
+A = 1, B = 1, C = 0
+So we directly write:
+Unlock= A.B. (C)`
+
+Error signal
+This should be HIGH for all other combinations except the correct one.
+Error=(Unlock)`
+Meaning=
+Error = (A·B·(C)`)`
+Using DeMorgan’s Law-
+Error =  (A)`+ (B)` + C
+
+
+
+## Project Files
+- Circuit diagram (Tinkercad link)
+- Truth table (attached in repository)
+- Simulation screenshots
